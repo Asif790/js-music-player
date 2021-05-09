@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(0deg, #d1d5db 23.8%, #93c5fd 92%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-container{
+    background-color: whitesmoke;
+    width: 320px;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    box-shadow: 0 10px 10px 0 #4b5563;
+}
+
+.musicInfo{
+    display: flex;
+    align-items: center;flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.cover img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.music-container.play .cover img{
+    animation-play-state: running;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.progress-container{
+    background-color: #d1d5db;
+    height: 4px;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 75%;
+    cursor: pointer;
+}
+
+.progress{
+    background-color: teal;
+    width: 0%;
+    height: 100%;
+    transition: width 0.1s linear;
+}
+
+.action-btn{
+    border: 0;
+    background-color: whitesmoke;
+    color: #d1d5db;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    outline: none;
+}
+
+.action-btn:hover{
+    color: gray;
+}
+
+.action-btn-big{
+    font-size: 30px;
+    color: gray;
+}
+
+.musicInfo h3{
+    font-size: 0.75rem;
+    font-weight: 400;
+}
